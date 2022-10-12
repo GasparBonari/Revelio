@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Style.css">
+    <title>Revelio</title>
+</head>
+<body>
+    <img src="jesus.gif" class="jesus hidden">
+    <img src="congrats.gif" class="congrats hidden">
+    <audio class="music" loop>
+        <source src="song1.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="player-container">
+        <img src="play.png" id="play">
+        <img src="pause.png" id="pause">
+    </div>
+    </header>
+    <img src="game-over.gif" class="gameOver hidden">
+    <img src="skull.gif" class="skull hidden">
+    <img src="candle.gif" class="candle hidden">
+    <h1 class="help">Guess the word</h1>
+    <img src="instructions.png" class="show-instruction">
+    <div class="instruction hidden">
+        <button class="close-Instruction">&times;</button>
+        <h2>🧾Instructions🧾</h2>
+        <pre class="instruction-text">
+    Guess the secret word!
+
+🔹 You will see the first and last
+    letter of the hidden word.
+🔹 They are all nouns.
+🔹 All words in lower case.
+        🍀Good Luck🍀
+        </pre>
+    </div>
+    <div class="overlay hidden"></div>
+    <p class="counter1">Lives: <span class="counter">5</span></p>
+    <img src="heart.png" class="heart">
+    <img src="broken.png" class ="heart-broken hidden">
+    <p class="show-secret hidden"></p>
+    <img src="Level1.gif" class="level level0 hidden">
+    <img src="Level2.gif" class="level level1 hidden">
+    <img src="Level3.gif" class="level level2 hidden">
+    </header>
+    <main> 
+        <section class="center">
+            <img src="frame.png" class="frame hidden">
+            <input type="string" class="guess"/>
+            <img src="enter.png" class="check hidden">
+        </section>
+        <section class="points">
+            <img src="flame.png" class="flame">
+            <img src="tromphy.png" class="tromphy">
+            <p class="score1">Score: 
+                <span class="score">0</span>
+            </p>
+            <p class="highscore1">Highscore: 
+                <span class="highscore">0</span>
+            </p>
+            <img src="playAgain.png" class="again">
+        </section>
+    </main>
+    <script src="Script.js"></script>
+</body>
+
+</html
