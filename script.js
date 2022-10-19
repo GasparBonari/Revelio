@@ -56,6 +56,7 @@ let skull = document.querySelector(".skull");
 let candle = document.querySelector(".candle");
 let jesus = document.querySelector(".jesus");
 let congrats = document.querySelector(".congrats");
+let pointOut = document.querySelector(".point-out");
 
 let heart = document.querySelector(".heart");
 let heartBroken = document.querySelector(".heart-broken");
@@ -95,6 +96,7 @@ let startGame = function()
     gameOver.classList.add("hidden");
     skull.classList.add("hidden");
     candle.classList.add("hidden");
+    pointOut.classList.remove("hidden");
 
     heart.classList.remove("hidden");
     heartBroken.classList.add("hidden");
@@ -149,6 +151,7 @@ let checkGuess = function()
         center.textContent = "Good job!";
         btnLevel1.classList.add("hidden");
         btnLevel2.classList.remove("hidden");
+        pointOut.classList.remove("hidden");
         btnCheck.classList.add("hidden");
         score += 5;
         document.querySelector(".score").textContent = score;
@@ -218,6 +221,8 @@ function checkHighscore()
 let startLevel = function()
 {
     btnCheck.classList.remove("hidden");
+    pointOut.classList.add("hidden");
+
     let n = secret.slice(-1);
     center.textContent = secret[0].toLowerCase() + n.padStart(secret.length - 1, ".")
 }

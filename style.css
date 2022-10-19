@@ -58,7 +58,8 @@ h1 {
 h2 {
   color: #09012b;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-left: -4rem;
   text-align: center;
 }
 
@@ -88,10 +89,10 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 48%;
 
   background-color: white;
-  padding: 6rem;
+  padding: 10rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -102,7 +103,7 @@ h2 {
   width: 15rem;  
   position: absolute;
   top: 2.5%;
-  right: 8%; 
+  right: 7%; 
   cursor: pointer;
 }
 
@@ -157,6 +158,13 @@ h2 {
   cursor: pointer;
   left: 4cm;
   top: 6.5cm;
+}
+
+.point-out{
+  height: 12rem;
+  position: absolute;
+  left: 0cm;
+  top: 8.3cm;
 }
 
 .counter1 {
