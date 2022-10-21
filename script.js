@@ -57,6 +57,7 @@ let candle = document.querySelector(".candle");
 let jesus = document.querySelector(".jesus");
 let congrats = document.querySelector(".congrats");
 let pointOut = document.querySelector(".point-out");
+let pointOut1 = document.querySelector(".point-out1");
 
 let heart = document.querySelector(".heart");
 let heartBroken = document.querySelector(".heart-broken");
@@ -97,6 +98,7 @@ let startGame = function()
     skull.classList.add("hidden");
     candle.classList.add("hidden");
     pointOut.classList.remove("hidden");
+    pointOut1.classList.add("hidden");
 
     heart.classList.remove("hidden");
     heartBroken.classList.add("hidden");
@@ -140,6 +142,7 @@ let checkGuess = function()
             gameOver.classList.remove("hidden");
             skull.classList.remove("hidden");
             candle.classList.remove("hidden");
+            pointOut1.classList.add("hidden");
 
             showSecretNumber.textContent = secret;
             showSecretNumber.classList.remove("hidden");
@@ -152,6 +155,7 @@ let checkGuess = function()
         btnLevel1.classList.add("hidden");
         btnLevel2.classList.remove("hidden");
         pointOut.classList.remove("hidden");
+        pointOut1.classList.add("hidden");
         btnCheck.classList.add("hidden");
         score += 5;
         document.querySelector(".score").textContent = score;
@@ -168,6 +172,8 @@ let checkGuess = function()
         btnLevel2.classList.add("hidden");
         btnLevel3.classList.remove("hidden");
         btnCheck.classList.add("hidden");
+        pointOut.classList.remove("hidden");
+        pointOut1.classList.add("hidden");
         score += 5;
         document.querySelector(".score").textContent = score;
         secret = words2[rand].toLowerCase();
@@ -182,6 +188,7 @@ let checkGuess = function()
         btnLevel2.classList.add("hidden");
         btnLevel3.classList.add("hidden");
         btnCheck.classList.add("hidden");
+        pointOut1.classList.add("hidden");
         score += 5;
         document.querySelector(".score").textContent = score;
 
@@ -222,6 +229,7 @@ let startLevel = function()
 {
     btnCheck.classList.remove("hidden");
     pointOut.classList.add("hidden");
+    pointOut1.classList.remove("hidden");
 
     let n = secret.slice(-1);
     center.textContent = secret[0].toLowerCase() + n.padStart(secret.length - 1, ".")

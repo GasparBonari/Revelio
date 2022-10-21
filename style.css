@@ -138,7 +138,7 @@ h2 {
 .frame{
   opacity: 100;
   position: absolute;
-  top: -3.3cm;
+  top: -0.8cm;
   left: 1.2cm;
   padding: 1rem;
   width: 35rem;
@@ -165,6 +165,13 @@ h2 {
   position: absolute;
   left: 0cm;
   top: 8.3cm;
+}
+
+.point-out1{
+  height: 12rem;
+  position: absolute;
+  left: 12cm;
+  top: 12.5cm;
 }
 
 .counter1 {
@@ -246,12 +253,6 @@ h2 {
   right: 36%;
 }
 
-.skull2{
-  position: absolute;
-  top: 20%;
-  right: 2%;
-}
-
 .candle{
   position: absolute;
   top: 43.5%;
@@ -289,4 +290,166 @@ h2 {
   height: 7cm;
   top: 64.8%;
   left: 3%;
+}
+
+/*------------------------------------------------------Phone media------------------------------------------------------------- */
+
+@media only screen and (max-width: 480px)
+{
+  .heart{
+    height: 2rem;
+    position: absolute;
+    top:0.6cm;
+    left: 0.7cm;
+  }
+
+  .counter1 {
+    font-size: 0.4cm;
+    position: absolute;
+    top: 0.75cm;
+    left: 1.5cm;
+  }
+
+  .counter {
+    position: absolute;
+    top: 0.04cm;
+    left: 2.5cm;
+  }
+
+  #play {
+    height: 5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 37%;
+    top: 2%;
+  }
+  
+  #pause{
+    height: 5.3rem;
+    cursor: pointer;
+    position: absolute;
+    right: 37.3%;
+    top: 2%;
+  }
+
+  .Show-Instruction {
+    height: 5rem;
+    width: 10em;  
+    position: absolute;
+    top: 2.5%;
+    right: 7%; 
+    cursor: pointer;
+  }
+
+  .points {
+    font-size: 0.5cm;
+    position: absolute;
+    top: 17cm;
+    right: 1.5cm;
+    align-items: center;
+  }
+
+  .again {
+    height: 5rem;
+    position: absolute;
+    top: 4cm;
+    left: -0.5cm;
+    cursor: pointer;
+  }
+
+  .level {
+    height: 20rem;
+    position: absolute;
+    cursor: pointer;
+    left: 4cm;
+    top: 12cm;
+  }
+
+  .point-out{
+    height: 12rem;
+    position: absolute;
+    left: 0cm;
+    top: 13cm;
+  }
+
+  .point-out1{
+    height: 12rem;
+    position: absolute;
+    left: 0.1cm;
+    top: 11cm;
+  }
+
+  h1 {
+    font-size: 4.7rem;
+  }
+
+  .guess {
+    font-size: 4rem;
+    padding: 2.5rem;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    top: -1.5cm;
+    left: 17.5cm;
+    position: absolute;
+    opacity: 100;
+  }
+  
+  .frame{
+    opacity: 100;
+    position: absolute;
+    top: -2cm;
+    left: 17.5cm;
+    padding: 1rem;
+    width: 30rem;
+  }
+  
+  .check {
+    height: 10rem;
+    position: absolute;
+    cursor: pointer;
+    top: 2cm;
+    left: 19.5cm;
+  }
+
+  .gameOver{
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    height: 2cm;
+  }
+  
+  .skull{
+    position: absolute;
+    top: 20%;
+    right: -15%;
+  }
+  
+  .candle{
+    display: none;
+  }
+
+  .show-secret {
+    font-size: 5rem;
+    position: absolute;
+    padding: 0rem 3rem;
+    left: 1.7cm;
+    top: 10cm;
+  }
+
+  .congrats{
+    position: absolute;
+    width: 16cm;
+    height: 8cm;
+    top: 25%;
+    left: -22%;
+  }
+  
+  .jesus{
+    position: absolute;
+    width: 7cm;
+    height: 7cm;
+    top: 112%;
+    left: 3%;
+  }
 }
