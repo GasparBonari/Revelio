@@ -13,7 +13,7 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: rgb(255, 255, 255);
-  background-image: url('picture1.gif');
+  background-image: url('img/picture1.gif');
 }
 header {
   position: center;

@@ -83,7 +83,7 @@ let startGame = function()
     rand = Math.floor(Math.random() * words0.length);
     secret = words0[rand].toLowerCase();
 
-    document.body.style.backgroundImage = "url('picture1.gif')";
+    document.body.style.backgroundImage = "url('img/picture1.gif')";
     document.querySelector(".guess").style.opacity = 100;
     
     jesus.classList.add("hidden");
