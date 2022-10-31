@@ -1,5 +1,5 @@
 {
-    "singleQuote": true,
-    "arrowParens": "avoid",
-    "bracketSpacing": false
-  }
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "bracketSpacing": false
+}
