@@ -201,6 +201,16 @@ let checkGuess = function()
     }
 }
 
+// setting enter key
+
+let keyEnter = function(e)
+{
+    if(e.key == "Enter")
+    {
+        checkGuess();
+    }
+}
+
 // checking after guessing the correct word if user won or not
 
 function checkHighscore()
@@ -300,3 +310,4 @@ btnInstructions.addEventListener("click", showInstructions);
 btnCloseInstructions.addEventListener("click", closeInstructions);
 document.querySelector(".overlay").addEventListener("click", closeInstructions);
 document.addEventListener("keydown", keyClose);
+document.addEventListener("keydown", keyEnter);
