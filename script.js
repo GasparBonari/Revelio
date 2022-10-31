@@ -78,6 +78,8 @@ let currentLives, score, startingGame, nextLevel2, nextLevel3, secret;
 let highscore = 0;
 
 
+// the start of the game
+
 let startGame = function()
 {
     rand = Math.floor(Math.random() * words0.length);
@@ -114,6 +116,9 @@ let startGame = function()
     nextLevel3 = false;
 }
 startGame();
+
+
+// all the possibilities results coming from the "enter" button
 
 let checkGuess = function()
 {
@@ -196,6 +201,8 @@ let checkGuess = function()
     }
 }
 
+// checking after guessing the correct word if user won or not
+
 function checkHighscore()
 {
     if(highscore < score)
@@ -223,7 +230,8 @@ function checkHighscore()
     }
 }
 
-// Levels
+
+// star level after pressing the button 
 
 let startLevel = function()
 {
