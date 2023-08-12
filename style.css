@@ -11,22 +11,12 @@ html {
 }
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: 'Press Start 2P', sans-serif;
   color: rgb(255, 255, 255);
   background-image: url('img/picture1.gif');
-}
-header {
-  position: center;
-  height: 35px;
-  border-bottom: 7px solid #eee;
-}
-
-main {
-  height: 65vh;
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  background-repeat: no-repeat;
 }
 
 .center {

@@ -48,31 +48,31 @@ let words2 =
     "Holding"
 ];
 
+const lives = document.querySelector(".counter");
+const center =  document.querySelector(".help");
+const gameOver = document.querySelector(".gameOver");
+const skull = document.querySelector(".skull");
+const candle = document.querySelector(".candle");
+const jesus = document.querySelector(".jesus");
+const congrats = document.querySelector(".congrats");
+const pointOut = document.querySelector(".point-out");
+const pointOut1 = document.querySelector(".point-out1");
+
+const heart = document.querySelector(".heart");
+const heartBroken = document.querySelector(".heart-broken");
+const showSecretNumber = document.querySelector(".show-secret");
+const frameBox = document.querySelector(".frame");
+
+const btnCheck = document.querySelector(".check");
+const btnLevel1 = document.querySelector(".level0");
+const btnLevel2 = document.querySelector(".level1");
+const btnLevel3 = document.querySelector(".level2");
+const btnAgain = document.querySelector(".again");
+const btnPlay = document.querySelector('#play');
+const btnPause = document.querySelector("#pause");
+const btnInstructions = document.querySelector(".show-instruction");
+const btnCloseInstructions = document.querySelector(".close-instruction");
 let rand = Math.floor(Math.random() * words0.length);
-let lives = document.querySelector(".counter");
-let center =  document.querySelector(".help");
-let gameOver = document.querySelector(".gameOver");
-let skull = document.querySelector(".skull");
-let candle = document.querySelector(".candle");
-let jesus = document.querySelector(".jesus");
-let congrats = document.querySelector(".congrats");
-let pointOut = document.querySelector(".point-out");
-let pointOut1 = document.querySelector(".point-out1");
-
-let heart = document.querySelector(".heart");
-let heartBroken = document.querySelector(".heart-broken");
-let showSecretNumber = document.querySelector(".show-secret");
-let frameBox = document.querySelector(".frame");
-
-let btnCheck = document.querySelector(".check");
-let btnLevel1 = document.querySelector(".level0");
-let btnLevel2 = document.querySelector(".level1");
-let btnLevel3 = document.querySelector(".level2");
-let btnAgain = document.querySelector(".again");
-let btnPlay = document.querySelector('#play');
-let btnPause = document.querySelector("#pause");
-let btnInstructions = document.querySelector(".show-instruction");
-let btnCloseInstructions = document.querySelector(".close-instruction");
 
 let currentLives, score, startingGame, nextLevel2, nextLevel3, secret;
 let highscore = 0;
