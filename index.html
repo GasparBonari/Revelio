@@ -7,19 +7,22 @@
     <link href="img/icon.png" rel="shortcut icon" type="image/png" /> 
     <title>Revelio</title>
 </head>
+
 <body>
 
     <div class="top-nav">
-        <img src="img/heart.png" class="heart">
-        <img src="img/broken.png" class ="heart-broken hidden">
-        <p class="counter1">Lives: <span class="counter">5</span></p>
-
-        <div id="player-container">
-            <img src="img/play.png" id="play">
-            <img src="img/pause.png" id="pause">
+        <div class="nav-left">
+            <img class="heart" src="img/heart.png">
+            <img class ="heart-broken hidden" src="img/broken.png">
+            <p class="lives">Lives: <span class="counter">5</span></p>
         </div>
 
-        <img src="img/instructions.png" class="show-instruction">
+        <div class="nav-right">
+            <img id="play" src="img/play.png">
+            <img id="pause" src="img/pause.png">
+            <img class="show-instruction" src="img/instructions.png">
+        </div>
+
     </div>
 
     <h1 class="help">Guess the word</h1>
@@ -36,40 +39,38 @@
     <div class="instruction hidden">
         <button class="close-Instruction">&times;</button>
         <h2>🧾Instructions🧾</h2>
-        <pre class="instruction-text">
+        <div class="instruction-text">
             Guess the secret word!
-            
-
-        🔹 Press Level 1 to start playing.
-
-        🔹 You will see the first and last
-            letter of the hidden word.
-
-        🔹 They are all nouns.
-
-        🔹 All words in lower case.
-
-
-                🍀Good Luck🍀
-        </pre>
+            🔹 Press Level 1 to start playing.
+            🔹 You will see the first and last letter of the hidden word.
+            🔹 They are all nouns.
+            🔹 All words in lower case.
+            🍀Good Luck🍀
+        </div>
     </div>
     <div class="overlay hidden"></div>
     
     <div class="main-game"> 
 
         <section class="levels">
-            <p class="show-secret hidden"></p>
-            <img src="img/point-out.gif" class="point-out hidden">
-            <img src="img/Level1.gif" class="level level0 hidden">
-            <img src="img/Level2.gif" class="level level1 hidden">
-            <img src="img/Level3.gif" class="level level2 hidden">
+            <img class="point-out hidden" src="img/point-out.gif">
+            <img class="level level0 hidden" src="img/Level1.gif">
+            <img class="level level1 hidden" src="img/Level2.gif">
+            <img class="level level2 hidden" src="img/Level3.gif">
         </section>
 
         <section class="center">
-            <img class="frame hidden" src="img/frame.png">
-            <input class="guess" type="string" />
-            <img src="img/point-out.gif" class="point-out1 hidden">
-            <img class="check hidden" src="img/enter.png">
+            <p class="show-secret hidden"></p>
+
+            <div class="input-guess">
+                <img class="frame hidden" src="img/frame.png">
+                <input class="guess" type="string" />
+            </div>
+
+            <div class="check-guess">
+                <img class="point-out1 hidden" src="img/point-out.gif">
+                <img class="check hidden" src="img/enter.png">
+            </div>
         </section>
 
         <section class="points">
