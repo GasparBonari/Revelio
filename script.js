@@ -72,6 +72,7 @@ const btnPlay = document.querySelector('#play');
 const btnPause = document.querySelector("#pause");
 const btnInstructions = document.querySelector(".show-instruction");
 const btnCloseInstructions = document.querySelector(".close-instruction");
+const guess = document.querySelector(".guess");
 let rand = Math.floor(Math.random() * words0.length);
 
 let currentLives, score, startingGame, nextLevel2, nextLevel3, secret;
@@ -86,7 +87,7 @@ let startGame = function()
     secret = words0[rand].toLowerCase();
 
     document.body.style.backgroundImage = "url('img/picture1.gif')";
-    document.querySelector(".guess").style.opacity = 100;
+    guess.style.opacity = 100;
     
     jesus.classList.add("hidden");
     congrats.classList.add("hidden");
@@ -99,8 +100,8 @@ let startGame = function()
     gameOver.classList.add("hidden");
     skull.classList.add("hidden");
     candle.classList.add("hidden");
-    pointOut.classList.remove("hidden");
-    pointOut1.classList.add("hidden");
+    pointOut.style.opacity = 100;
+    pointOut1.style.opacity = 0;
 
     heart.classList.remove("hidden");
     heartBroken.classList.add("hidden");
@@ -110,7 +111,7 @@ let startGame = function()
     lives.textContent = currentLives;
     score = 0;
     document.querySelector(".score").textContent = score;
-    document.querySelector(".guess").value = "";
+    guess.value = "";
     startingGame = true;
     nextLevel2 = false;
     nextLevel3 = false;
@@ -122,9 +123,8 @@ startGame();
 
 let checkGuess = function()
 {
-    let guess = document.querySelector(".guess").value;
 
-    if(guess !== secret)
+    if(guess.value !== secret)
     {
         currentLives--;
         lives.textContent = currentLives;
@@ -134,7 +134,7 @@ let checkGuess = function()
             document.body.style.backgroundImage = "none";
             document.body.style.backgroundColor = "black";
 
-            document.querySelector(".guess").style.opacity = 0;
+            guess.style.opacity = 0;
 
             frameBox.classList.add("hidden");
             heart.classList.add("hidden");
@@ -147,20 +147,20 @@ let checkGuess = function()
             gameOver.classList.remove("hidden");
             skull.classList.remove("hidden");
             candle.classList.remove("hidden");
-            pointOut1.classList.add("hidden");
+            pointOut1.style.opacity = 0;
 
             showSecretNumber.textContent = secret;
             showSecretNumber.classList.remove("hidden");
         }  
     }
 
-    if(guess == secret && startingGame)
+    if(guess.value == secret && startingGame)
     {
         center.textContent = "Good job!";
         btnLevel1.classList.add("hidden");
         btnLevel2.classList.remove("hidden");
-        pointOut.classList.remove("hidden");
-        pointOut1.classList.add("hidden");
+        pointOut.style.opacity = 100;
+        pointOut1.style.opacity = 0;
         btnCheck.classList.add("hidden");
         score += 5;
         document.querySelector(".score").textContent = score;
@@ -171,14 +171,14 @@ let checkGuess = function()
         checkHighscore()
     }
 
-    if(guess == secret && nextLevel2)
+    if(guess.value == secret && nextLevel2)
     {
         center.textContent = "You got it!";
         btnLevel2.classList.add("hidden");
         btnLevel3.classList.remove("hidden");
         btnCheck.classList.add("hidden");
-        pointOut.classList.remove("hidden");
-        pointOut1.classList.add("hidden");
+        pointOut.style.opacity = 100;
+        pointOut1.style.opacity = 0;
         score += 5;
         document.querySelector(".score").textContent = score;
         secret = words2[rand].toLowerCase();
@@ -188,12 +188,12 @@ let checkGuess = function()
         checkHighscore()
     }
 
-    if(guess == secret && nextLevel3)
+    if(guess.value == secret && nextLevel3)
     {
         btnLevel2.classList.add("hidden");
         btnLevel3.classList.add("hidden");
         btnCheck.classList.add("hidden");
-        pointOut1.classList.add("hidden");
+        pointOut1.style.opacity = 0;
         score += 5;
         document.querySelector(".score").textContent = score;
 
@@ -228,15 +228,13 @@ function checkHighscore()
 
         center.textContent = "";
 
-        document.querySelector(".guess").style.opacity = 0;
+        guess.style.opacity = 0;
         btnLevel1.classList.add("hidden");
         btnLevel2.classList.add("hidden");
         btnLevel3.classList.add("hidden");
         frameBox.classList.add("hidden");
         jesus.classList.remove("hidden");
         congrats.classList.remove("hidden");
-        
-
     }
 }
 
@@ -246,8 +244,8 @@ function checkHighscore()
 let startLevel = function()
 {
     btnCheck.classList.remove("hidden");
-    pointOut.classList.add("hidden");
-    pointOut1.classList.remove("hidden");
+    pointOut.style.opacity = 0;
+    pointOut1.style.opacity = 100;
 
     let n = secret.slice(-1);
     center.textContent = secret[0].toLowerCase() + n.padStart(secret.length - 1, ".")
@@ -306,6 +304,7 @@ btnLevel2.addEventListener("click", startLevel);
 btnLevel3.addEventListener("click", startLevel);
 btnAgain.addEventListener("click", startGame);
 btnCheck.addEventListener("click", checkGuess);
+
 btnInstructions.addEventListener("click", showInstructions);
 btnCloseInstructions.addEventListener("click", closeInstructions);
 document.querySelector(".overlay").addEventListener("click", closeInstructions);

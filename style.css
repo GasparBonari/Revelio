@@ -110,7 +110,7 @@ h2{
 }
 
 .instruction-text {
-  font-size: 1.7rem;                              /* CHANGE TO MAKE RESPONSIVE */
+  font-size: 1.7rem;
   color: #09012b;
   font-family: 'Press Start 2P', sans-serif;
   line-height: 2;
@@ -296,5 +296,17 @@ h2{
 {
   .main-game{
     flex-direction: column;
+  }
+
+  .points{
+    margin-top: 259px;
+  }
+}
+
+@media screen and (max-width:600px)
+{
+  .top-nav{
+    flex-direction: column;
+    gap: 33px;
   }
 }
