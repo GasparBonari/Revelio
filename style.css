@@ -168,15 +168,12 @@ h2{
   font-size: 0.8cm;
   flex-direction: column;
   align-items: center;
-}
-
-.points {
-  font-size: 0.8cm;
-  align-items: center;
+  position: relative;
 }
 
 .input-guess{
   position: relative;
+  z-index: 1;
 }
 
 .guess {
@@ -202,48 +199,68 @@ h2{
   z-index: -1;
 }
 
+.check-guess {
+  position: absolute;
+  display: flex;
+  top: 200%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
 
 .check {
   height: 10rem;
   cursor: pointer;
-
 }
 
 .point-out1{
   height: 12rem;
+}
 
+.points {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8cm;
+  align-items: center;
+  margin-top: 150px;
+  gap: 38px;
+}
+
+.score-section{
+  display: flex;
+}
+
+.highscore-section{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .score1 {
-  margin-bottom: 5rem;
   height: 6rem;
 }
 
 .flame{
   height: 6rem;
-
+  margin-top: -22px;
 }
 
 .tromphy{
   height: 6rem;
-
 }
 
-.highscore {
+.highscore{
   margin-bottom: 5rem;
 }
 
-.again {
+.again{
   height: 7rem;
-
   cursor: pointer;
 }
 
-.show-secret {
+.show-secret{
   font-size: 5rem;
   padding: 0rem 3rem;
-
-  font-family: 'Press Start 2P', sans-serif;
 }
 
 /* .gameOver{
@@ -259,7 +276,6 @@ h2{
 } */
 
 .candle{
-
   height:10rem;
 }
 
@@ -270,193 +286,15 @@ h2{
 }
 
 .jesus{
-
   width: 7cm;
   height: 7cm;
-
 }
 
 /*------------------------------------------------------Phone media------------------------------------------------------------- */
 
-/* @media only screen and (max-width: 480px)
+@media screen and (max-width:1120px)
 {
-  .heart{
-    height: 2rem;
-    position: absolute;
-    top:0.6cm;
-    left: 0.7cm;
+  .main-game{
+    flex-direction: column;
   }
-
-  .counter1 {
-    font-size: 0.4cm;
-    position: absolute;
-    top: 0.75cm;
-    left: 1.5cm;
-  }
-
-  #play {
-    height: 5rem;
-    cursor: pointer;
-    position: absolute;
-    right: 37%;
-    top: 2%;
-  }
-  
-  #pause{
-    height: 5.3rem;
-    cursor: pointer;
-    position: absolute;
-    right: 37.3%;
-    top: 2%;
-  }
-
-  .Show-Instruction {
-    height: 5rem;
-    width: 10em;  
-    position: absolute;
-    top: 2.5%;
-    right: 7%; 
-    cursor: pointer;
-  }
-
-  .points {
-    font-size: 0.5cm;
-    position: absolute;
-    top: 17cm;
-    right: 1.5cm;
-    align-items: center;
-  }
-
-  .again {
-    height: 5rem;
-    position: absolute;
-    top: 4cm;
-    left: -0.5cm;
-    cursor: pointer;
-  }
-
-  .level {
-    height: 20rem;
-    position: absolute;
-    cursor: pointer;
-    left: 4cm;
-    top: 12cm;
-  }
-
-  .point-out{
-    height: 12rem;
-    position: absolute;
-    left: 0cm;
-    top: 13cm;
-  }
-
-  .point-out1{
-    height: 12rem;
-    position: absolute;
-    left: 0.1cm;
-    top: 11cm;
-  }
-
-  h1 {
-    font-size: 4.7rem;
-  }
-
-  .guess {
-    font-size: 4rem;
-    padding: 2.5rem;
-    width: 30rem;
-    text-align: center;
-    margin-bottom: 5rem;
-    top: -1.5cm;
-    left: 17.5cm;
-    position: absolute;
-    opacity: 100;
-  }
-  
-  .frame{
-    opacity: 100;
-    position: absolute;
-    top: -2cm;
-    left: 17.5cm;
-    padding: 1rem;
-    width: 30rem;
-  }
-  
-  .check {
-    height: 10rem;
-    position: absolute;
-    cursor: pointer;
-    top: 2cm;
-    left: 19.5cm;
-  }
-
-  .gameOver{
-    position: absolute;
-    top: 7%;
-    right: 4%;
-    height: 2cm;
-  }
-  
-  .skull{
-    position: absolute;
-    top: 20%;
-    right: -15%;
-  }
-  
-  .candle{
-    display: none;
-  }
-
-  .show-secret {
-    font-size: 5rem;
-    position: absolute;
-    padding: 0rem 3rem;
-    left: 1.7cm;
-    top: 10cm;
-  }
-
-  .congrats{
-    position: absolute;
-    width: 16cm;
-    height: 8cm;
-    top: 25%;
-    left: -22%;
-  }
-  
-  .jesus{
-    position: absolute;
-    width: 7cm;
-    height: 7cm;
-    top: 112%;
-    left: 3%;
-  }
-
-  .Instruction {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-  
-    background-color: rgb(255, 255, 255);
-    padding: 4rem;
-    border-radius: 5px;
-    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
-  }
-
-  h2 {
-    color: #09012b;
-    font-size: 1.8rem;
-    margin-bottom: 5rem;
-    margin-left: -3rem;
-    text-align: center;
-  }
-  
-  .instruction-text {
-    font-size: 1rem;
-    margin-left: -0.5cm;
-    color: #09012b;
-    font-family: 'Press Start 2P', sans-serif;
-  }
-} */
+}
