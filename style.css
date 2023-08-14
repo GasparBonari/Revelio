@@ -16,7 +16,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: rgb(255, 255, 255);
   background-image: url('img/picture1.gif');
-  background-repeat: no-repeat;
 }
 
 h1{
@@ -139,23 +138,24 @@ h2{
 
 .main-game{
   display: flex;
-  margin-top: 50px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .levels{
   display: flex;
+  align-self: center;
 }
 
 .level {
   height: 24rem;
-
   cursor: pointer;
-
 }
 
 .point-out{
+  display: flex;
+  align-self: center;
   height: 12rem;
-
 }
 
 
@@ -172,11 +172,11 @@ h2{
 
 .points {
   font-size: 0.8cm;
-
   align-items: center;
 }
 
 .input-guess{
+  position: relative;
 }
 
 .guess {
@@ -189,16 +189,17 @@ h2{
   padding: 2.5rem;
   width: 30rem;
   text-align: center;
-  margin-bottom: 5rem;
-
   opacity: 100;
 }
 
 .frame{
-  opacity: 100;
-
-  padding: 1rem;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
   width: 35rem;
+  z-index: -1;
 }
 
 
