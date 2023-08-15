@@ -27,11 +27,10 @@
 
     <h1 class="help">Guess the word</h1>
 
-    <img src="img/jesus.gif" class="jesus hidden">
-    <img src="img/congrats.gif" class="congrats hidden">
-    <img src="img/game-over.gif" class="gameOver hidden">
-    <img src="img/skull.gif" class="skull hidden">
-    <img src="img/candle.gif" class="candle hidden">
+    <img class="jesus hidden" src="img/jesus.gif">
+    <img class="congrats hidden" src="img/congrats.gif">
+    <img class="gameOver hidden" src="img/game-over.gif">
+    <img class="skull hidden" src="img/skull.gif">
     <audio class="music" loop>
         <source src="song1.mp3" type="audio/mpeg" />
     </audio>
@@ -57,11 +56,14 @@
             <img class="level level0 hidden" src="img/Level1.gif">
             <img class="level level1 hidden" src="img/Level2.gif">
             <img class="level level2 hidden" src="img/Level3.gif">
+
+            <div class="hidden-word">
+                <img class="candle hidden" src="img/candle.gif">
+                <p class="show-secret hidden"></p>
+            </div>
         </section>
 
         <section class="center">
-            <p class="show-secret hidden"></p>
-
             <div class="input-guess">
                 <img class="frame hidden" src="img/frame.png">
                 <input class="guess" type="string" />
